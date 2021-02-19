@@ -18,8 +18,7 @@ _start:
 
 	mov eax, 4		; move the system call number, 4 for write, into the eax register
 	mov ebx, 1		; move the ststem call number, 1 for stdout, into ebx register
-	mov ecx, message	; move the address of the message string into ecx register
-	mov edx, edx		; move the size of the message string into edx 
+	mov ecx, message	; move the address of the message string into ecx register 
 	int 80h			; request and interrupt for libc
 exit:
 	mov eax, 1		; move the system call number, 1 for exit, into eax register
